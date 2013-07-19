@@ -1,0 +1,5 @@
+Django
+django-recaptcha-works
+-e git://github.com/dokterbob/django-contact-form.git@7e3e689dea908b2ae6fba816355e0e9c4668f64e#egg=django_contact_form-dev
+django-crispy-forms
+django-flatpages-x

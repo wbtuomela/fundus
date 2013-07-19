@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="google-site-verification" content="">
+    <script type="text/javascript" src="//use.typekit.net/{{ TYPEKIT_ID }}.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    {% if request.META.HTTP_HOST in ALLOWED_HOSTS %}
+    <link href="{{ STATIC_URL }}bootstrap.min.css" rel="stylesheet">
+    {% else %}
+    <link rel="stylesheet/less" href="{{ STATIC_URL }}less/bootstrap.less">
+    <link rel="stylesheet/less" href="{{ STATIC_URL }}less/responsive.less">
+    <script src="{{ STATIC_URL }}lib/less-1.4.1.min.js"></script>
+    {% endif %}
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico">
+  </head>
+
+  <body>
+    {% block content %}
+    {% endblock %}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}lib/bootstrap.min.js"></script>
+    {% block script %}{% endblock %}
+  </body>
+</html>

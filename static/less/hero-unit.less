@@ -1,0 +1,28 @@
+//
+// Hero unit
+// --------------------------------------------------
+
+
+.hero-unit {
+  padding: 40px;
+  margin: 50px 0;
+  //font-size: 18px;
+  //font-weight: 200;
+  //line-height: @baseLineHeight * 1.5;
+  color: @heroUnitLeadColor;
+  //background-color: @heroUnitBackground;
+  background-image:url(/static/handmadepaper.png);
+  .border-radius(3px);
+  //.box-shadow(0 1px 4px rgba(0,105,214,.25));
+  .box-shadow(0 1px 4px rgba(33,33,33,.25));
+  h1 {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+    color: @heroUnitHeadingColor;
+    letter-spacing: -1px;
+  }
+  li {
+    line-height: @baseLineHeight * 1.5; // Reset since we specify in type.less
+  }
+}
