@@ -16,6 +16,7 @@
     {% else %}
     <link rel="stylesheet/less" href="{{ STATIC_URL }}less/bootstrap.less">
     <link rel="stylesheet/less" href="{{ STATIC_URL }}less/responsive.less">
+    <script type="text/javascript">var less=less||{};less.env='development';</script>
     <script src="{{ STATIC_URL }}lib/less-1.4.1.min.js"></script>
     {% endif %}
 
@@ -23,8 +24,20 @@
   </head>
 
   <body>
+    <img class="logo" src="{{ STATIC_URL }}img/logo.png">
+    <header>
+      <div class="article-title">
+        <h1 class="title">George Charles & Sons</h1>
+        <h3 class="subtitle">Men's Fine Bespoke</h3>
+      </div>
+    </header>
+
     {% block content %}
     {% endblock %}
+
+    <footer>
+      <p>Appointments &amp; Inquiries: info@gcandsons.com</p>
+    </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="{{ STATIC_URL }}lib/bootstrap.min.js"></script>
